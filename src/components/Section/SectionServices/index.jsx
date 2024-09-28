@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./style.module.scss";
-import { imgSkills } from '../images';
+import { imgSkills } from '../../images';
 
 export const SectionServices = ({addToRefs}) => {  
     return (

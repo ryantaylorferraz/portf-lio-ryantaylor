@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./style.module.scss";
-import { Slider } from "../Slider";
+import { Slider } from "../../Slider";
 
 import { SwiperSlide, Swiper } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation, A11y } from "swiper/modules";
-import { imgProjects } from "../images";
+import { imgProjects } from "../../images";
 
 export const SectionProjects = ({addToRefs}) => {
   return (

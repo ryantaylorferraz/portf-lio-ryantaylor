@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import { Header } from "./components/Header";
 import { SectionAbout } from "./components/Section/SectionAbout";
 import { SectionHome } from "./components/Section/SectionHome";
-import { SectionContact } from "./components/SectionContact";
-import { SectionProjects } from "./components/SectionProjects";
-import { SectionServices } from "./components/SectionServices";
 import "./styles/index.scss"
 import { Footer } from "./components/footer";
+import { SectionServices } from "./components/Section/SectionServices";
+import { SectionProjects } from "./components/Section/SectionProjects";
+import { SectionContact } from "./components/Section/SectionContact";
 
 function App() {
   const sectionsRef = useRef([]);
