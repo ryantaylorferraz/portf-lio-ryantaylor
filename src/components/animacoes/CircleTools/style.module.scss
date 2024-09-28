@@ -1,0 +1,85 @@
+@media (min-width: 1150px) {
+  .circle {
+    position: absolute;
+    right: 200px;
+    border: 2px solid var(--verde-menta-suave);
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    animation: rotate 9s ease infinite;
+    z-index: 1; /* Deve ser menor que o z-index da divBox */
+  }
+
+  .html,
+  .css,
+  .js,
+  .react {
+    position: absolute;
+    background-color: var(--verde-musgo-escuro);
+    color: var(--verde-menta-suave);
+    height: 60px; /* Aumentando a altura dos elementos */
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    opacity: 1;
+    transition: opacity 0.5s;
+    font-size: 1.8rem; /* Corrigido para font-size */
+  }
+
+  .html {
+    bottom: 160px; /* Ajustado para o novo tamanho do círculo */
+    right: -115px; /* Ajustado para o novo tamanho do círculo */
+    transform: rotate(180deg);
+    transform-origin: left center;
+  }
+
+  .css {
+    bottom: 180px; /* Ajustado para o novo tamanho do círculo */
+    left: -35px; /* Ajustado para o novo tamanho do círculo */
+  }
+
+  .js {
+    top: -110px; /* Ajustado para o novo tamanho do círculo */
+    left: 200px; /* Ajustado para o novo tamanho do círculo */
+    transform: rotate(90deg);
+    transform-origin: left center;
+  }
+
+  .react {
+    bottom: -90px; /* Ajustado para o novo tamanho do círculo */
+    left: 180px; /* Ajustado para o novo tamanho do círculo */
+    transform: rotate(-90deg);
+    transform-origin: left center;
+  }
+}
+
+@media(max-width: 1149px) {
+  .html,
+  .css,
+  .js,
+  .react {
+display: none;
+  }
+}
+
+
+@keyframes rotate {
+  100% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(90deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  25% {
+    transform: rotate(270deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}

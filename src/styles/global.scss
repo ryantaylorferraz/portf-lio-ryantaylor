@@ -1,0 +1,41 @@
+:root {
+  /* Cores Principais */
+  --verde-pinho-profundo: #0f312b;
+  --verde-menta-suave: #88b2a1;
+  --verde-pastel-claro: #c4dad2;
+  --branco-esverdeado: #e9efec;
+  --verde-musgo-escuro: #06110f;
+
+  --font-primary: "Poppins", sans-serif;
+  --font-secondary: "Inter", system-ui;
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--verde-musgo-escuro);
+  color: #fff;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--verde-musgo-escuro);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--verde-menta-suave);
+  border-radius: 1px;
+  // border: 2px solid #e9efec;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--verde-menta-suave);
+}

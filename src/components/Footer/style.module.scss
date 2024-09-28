@@ -1,0 +1,31 @@
+.footer {
+    background-color: var(--verde-menta-suave);
+    height: 5rem;
+    .divFooter {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-inline: 4rem;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .pFooter {
+            font-size: .8rem;
+        }
+
+        .bx {
+            color: var(--verde-menta-suave);
+            font-size: 2.5rem;
+            border-radius: 8px;
+            border: 4px solid var(--verde-menta-suave); // Mantém o outline transparente
+            background-color: #FFF;
+        
+            &:hover {
+                outline: 4px solid transparent; // Aplica o outline na interação
+            }
+        }
+
+    }
+}

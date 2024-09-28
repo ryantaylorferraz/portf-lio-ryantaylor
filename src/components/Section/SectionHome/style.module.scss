@@ -1,0 +1,175 @@
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.sectionContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  height: 100vh;
+
+  .divApresentation {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    animation: appear 1s forwards;
+
+    padding-inline: 1rem;
+    display: flex;
+    gap: clamp(3rem, 2.118rem + 4.03vw, 5rem);
+    flex-direction: column;
+    // justify-content: center;
+    height: 20rem;
+    .divTexts {
+      display: flex;
+      gap: 0.5rem;
+      flex-direction: column;
+    }
+
+    .titleSection1 {
+      font-size: clamp(1.8rem, 1.733rem + 0.305vw, 2rem);
+      color: #fff;
+    }
+    .titleSection2 {
+      font-size: clamp(2rem, 1.333rem + 3.048vw, 4rem);
+      color: var(--verde-menta-suave);
+    }
+
+    .divInfo {
+      animation: appear linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 20%;
+      animation: appear 1s forwards;
+
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      font-weight: 600;
+      .pDev {
+        font-size: clamp(0.8rem, 0.667rem + 0.61vw, 1.2rem);
+        .spanSite {
+          color: var(--verde-menta-suave);
+        }
+      }
+      .spanIcons {
+        display: flex;
+        gap: 0.8rem;
+        a {
+          color: var(--verde-menta-suave);
+          border: 2px solid var(--verde-menta-suave);
+          padding: 0.5rem;
+          border-radius: 50%;
+          transition: 0.4s;
+          &:hover {
+            background-color: var(--verde-menta-suave);
+            color: #fff;
+          }
+          .bx {
+            font-size: 28px;
+          }
+        }
+      }
+      .btnCv {
+        width: 50%;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+        background-color: var(--verde-menta-suave);
+        color: #fff;
+        font-size: clamp(0.6rem, 0.44rem + 0.64vw, 1rem);
+      }
+    }
+  }
+  .titleSection3 {
+    font-size: clamp(0.8rem, 0.667rem + 0.61vw, 1.2rem);
+    color: #fff;
+    text-align: end;
+    span {
+      color: var(--verde-menta-suave);
+    }
+  }
+
+  @media (min-width: 1150px) {
+    .divBox {
+      position: relative;
+      // height: 90%;
+      border-top: 50vh solid var(--verde-menta-suave);
+      border-right: 330px solid var(--verde-menta-suave);
+      border-bottom: 50vh solid var(--verde-menta-suave);
+      border-left: 580px solid transparent;
+      z-index: 2;
+
+      .divCircle {
+        position: relative;
+        z-index: 1;
+      }
+    }
+    .carousel {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .sectionContainer {
+    padding-top: clamp(5rem, 0.592rem + 20.151vw, 15rem);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .divApresentation {
+      // flex-direction: row;
+      width: 80%;
+      margin-bottom: 5rem;
+      // flex-wrap: wrap;
+
+      .divTexts {
+        // flex-direction: row;
+      }
+    }
+    /* styles.css */
+    .carousel {
+      display: flex;
+      overflow: hidden; /* Esconde o conteúdo que ultrapassa o contêiner */
+      width: 100%; /* Ajuste conforme necessário */
+      position: relative; /* Para o efeito de rolagem */
+      background-color: var(--verde-menta-suave);
+    }
+
+    .ulHome {
+      display: flex;
+      align-items: center;
+      animation: scroll 14s linear infinite; /* Animação contínua */
+      padding: 0; /* Remove o padding padrão */
+      margin: 0; /* Remove o margin padrão */
+    }
+
+    .ulHome li {
+      list-style: none; /* Remove os marcadores da lista */
+      font-size: 1.5rem; /* Ajuste do tamanho da fonte */
+      padding: 0 2rem; /* Espaçamento entre os itens */
+    }
+
+    /* Definindo a animação de rolagem */
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%); /* Mova para a esquerda */
+      }
+    }
+  }
+}
