@@ -66,6 +66,9 @@
 }
 
 @media(max-width: 750px) {
+  .headerContainer {
+    height: 100px;
+  }
   .listHeader {
     display: none;
   }
@@ -73,7 +76,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: .3rem;
+    flex-direction: column-reverse;
   }
 } 
 
@@ -94,14 +98,14 @@
 }
 
 .lua, .sol {
-  width: 25px; /* Ajuste a largura do ícone */
-  height: 25px; /* Ajuste a altura do ícone */
-  background-size: cover; /* Ajusta a imagem para cobrir o elemento */
-  background-position: center; /* Centraliza a imagem */
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  background-position: center;
 }
 
 .lua {
-  background-image: url('../../assets/forma-de-meia-lua.png');
+  background-image: url('../../assets/lua.png');
 }
 
 .sol {

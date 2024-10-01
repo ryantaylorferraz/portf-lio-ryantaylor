@@ -32,7 +32,7 @@ export const SectionProjects = ({addToRefs}) => {
             clickable: true,
           }}
           modules={[EffectCoverflow, Pagination, Navigation, A11y]}
-          className="swiper_container"
+          className={styles.swiper_container}
         >
           <ul>
             {imgProjects.map((project, index) => (

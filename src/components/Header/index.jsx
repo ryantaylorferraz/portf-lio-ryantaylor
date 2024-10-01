@@ -9,10 +9,11 @@ import { motion } from "framer-motion";
 import { useThemeContext } from "../../providers/themeProvider";
 import Hamburger from "hamburger-react";
 import { useModalContext } from "../../providers/ModalProvider";
+import { ModalSection } from "../Modal";
 
 export const Header = ({ activeId }) => {
     const [isOpen, setOpen] = useState(false)
-    const {toggleModal} = useModalContext()
+    const {openModal, toggleModal} = useModalContext()
 
     const {toggleTheme, isOn} = useThemeContext()
 
@@ -55,8 +56,10 @@ export const Header = ({ activeId }) => {
                     <div className={styles.switch} data-isOn={isOn} onClick={toggleTheme}>
                     <motion.div  className={isOn ? styles.sol : styles.lua} layout transition={spring} />
                     </div>
+
                 </nav>
             </div>
+            {openModal ? <ModalSection /> : ""}
         </header>
     )
 }

@@ -1,57 +1,71 @@
 @keyframes appear {
-    from {
-      opacity: 0;
-      transform: translateX(-200px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0px);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(-200px);
   }
-
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes appearr {
+  from {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 
 .containerProject {
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 45%;
+  min-height: 75vh;
+  margin-bottom: 2rem;
+  width: 100%;
+  // padding-inline: clamp(2rem, -1.421rem + 18.246vw, 15rem);
+  // padding-top: 2rem;
+  background-color: var(--verde-musgo-escuro);
+  display: flex;
+  // align-items: start;
+  padding-top: 5rem;
+  justify-content: center;
+  z-index: -1;
 
+  // @media(max-width: 600px) {
+  //     height: 90vh;
+  // }
 
-    min-height: 75vh;
-    margin-bottom: 2rem;
-    width: 100%;
-    // padding-inline: clamp(2rem, -1.421rem + 18.246vw, 15rem);
-    // padding-top: 2rem;
-    background-color: var(--verde-musgo-escuro);
-    display: flex;
-    // align-items: start;
-    padding-top: 5rem;
-    justify-content: center;
-    z-index: -1;
+  div {
+    height: fit-content;
+    h2 {
+      animation: appear 0.5s ease-out;
+      animation-timeline: view();
+      animation-range: entry 0% cover 45%;
 
-    // @media(max-width: 600px) {
-    //     height: 90vh;
-    // }
+      font-size: 2.5rem;
+      text-align: center;
+      color: var(--white);
 
-    div {
-        height: fit-content;
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            color: var(--white);
-
-            span {
-                color: var(--verde-menta-suave);
-            }
-        }
-
-        .swiper-slide {
-            display: flex;
-            flex-direction: column;
-            background-color: var(--verde-menta-suave);
-        }
+      span {
+        color: var(--verde-menta-suave);
+      }
     }
+
+    .swiper_container {
+      animation: appearr linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 45%;
+    }
+
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--verde-menta-suave);
+    }
+  }
 }
 
 .swiper {
-    height: 5rem;
+  height: 5rem;
 }

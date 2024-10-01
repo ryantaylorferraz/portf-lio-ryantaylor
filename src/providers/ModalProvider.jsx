@@ -5,6 +5,8 @@ export const ModalContext = createContext({});
 
 export const ModalProvider = ({ children }) => {
     const [openModal, setOpenModal] = useState(false)
+    console.log(openModal);
+    
     
     const toggleModal = () => {
         setOpenModal(!openModal)
@@ -12,7 +14,7 @@ export const ModalProvider = ({ children }) => {
 
 
     return (
-        <ModalContext.Provider value={{toggleModal}}>
+        <ModalContext.Provider value={{openModal, toggleModal}}>
             {children}
         </ModalContext.Provider>
     )

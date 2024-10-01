@@ -9,6 +9,7 @@ import { SectionProjects } from "./components/Section/SectionProjects";
 import { SectionContact } from "./components/Section/SectionContact";
 
 import { motion } from "framer-motion";
+import { SectionCursor } from "./components/Section/SectionCursor";
 
 function App() {
 
@@ -46,6 +47,7 @@ useEffect(() => {
   return <>
 
   <Header activeId={activeId} />
+  <SectionCursor />
   <SectionHome addToRefs={addToRefs} />
   <SectionAbout addToRefs={addToRefs} />
   <SectionServices addToRefs={addToRefs} />

@@ -1,0 +1,52 @@
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 750px) {
+  .modalOverlay {
+    position: fixed;
+    right: 0;
+    display: flex;
+    width: clamp(10rem, 8.636rem + 7.273vw, 15rem);
+    height: 100vh;
+    background-color: var(--verde-musgo-escuro);
+    z-index: 1000;
+    opacity: 0; /* Começa invisível */
+    transform: translateX(-200px); /* Começa fora da tela */
+    transition: opacity 0.5s ease, transform 0.3s ease; /* Transição suave */
+  }
+
+  .modalOverlay.open {
+    animation: appear 0.3s forwards; /* Aplica a animação */
+    opacity: 1; /* Torna visível */
+    transform: translateX(0); /* Move para a posição original */
+  }
+
+  .modalBox {
+    padding: 1.5rem;
+    background-color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 35rem; /* Largura do conteúdo do modal */
+  }
+
+  .listModal {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    a {
+        &:hover {
+            color: var(--verde-menta-suave);
+        }
+
+    }
+  }
+}

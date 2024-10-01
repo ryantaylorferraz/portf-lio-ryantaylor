@@ -1,18 +1,26 @@
 @keyframes appear {
     from {
       opacity: 0;
-      transform: translateX(-200px);
+      transform: translateY(-150px);
     }
     to {
       opacity: 1;
-      transform: translateX(0px);
+      transform: translateY(0px);
+    }
+  }
+
+@keyframes appearr {
+    from {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
     }
   }
 
 .containerSkills{
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
 
     width: 100%;
     padding-inline: clamp(0rem, -3.947rem + 21.053vw, 15rem);
@@ -29,6 +37,9 @@
             text-align: center;
             font-size: 2.5rem;
             padding-bottom: 2rem;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
             span {
                 color: var(--verde-menta-suave);
             }
@@ -36,6 +47,10 @@
 
     
    .containerImg {
+    animation: appearr linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
