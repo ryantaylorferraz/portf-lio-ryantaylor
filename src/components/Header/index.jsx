@@ -2,12 +2,17 @@ import { IoSunnySharp } from "react-icons/io5";
 import { FiMoon, FiSun } from "react-icons/fi";
 
 import styles from "./style.module.scss"
+
 import { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
 import { useThemeContext } from "../../providers/themeProvider";
+import Hamburger from "hamburger-react";
+import { useModalContext } from "../../providers/ModalProvider";
 
 export const Header = ({ activeId }) => {
+    const [isOpen, setOpen] = useState(false)
+    const {toggleModal} = useModalContext()
 
     const {toggleTheme, isOn} = useThemeContext()
 
@@ -44,13 +49,12 @@ export const Header = ({ activeId }) => {
                         <a href="#portfólio" className={activeId === 'portfólio' ? `${styles.active}` : ''}>Projetos</a>
                         <a href="#contact" className={activeId === 'contact' ? `${styles.active}` : ''}>Contato</a>
                     </div>
+                    <div className={styles.divHamburguer} onClick={() => toggleModal()}>
+                        <Hamburger   toggled={isOpen} toggle={setOpen} />
+                    </div>
                     <div className={styles.switch} data-isOn={isOn} onClick={toggleTheme}>
                     <motion.div  className={isOn ? styles.sol : styles.lua} layout transition={spring} />
                     </div>
-                    
-                    {/* <span className={styles.spanIcon} onClick={() => setModo(!modo)} > {modo ? <FiSun size={34} />
-                        : <FiMoon size={34} />
-                    }</span> */}
                 </nav>
             </div>
         </header>

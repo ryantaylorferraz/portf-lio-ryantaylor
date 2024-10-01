@@ -7,6 +7,7 @@
   height: 80px;
   z-index: 3;
   transition: .5s;
+  
 
   .divContainer {
     margin: 0 auto;
@@ -26,19 +27,22 @@
 
     @media(min-width: 750px) {
 
-    
-
     .navBox {
       display: flex;
       color: var(--white);
       gap: 2rem;
       font-size: 1.3rem;
-
+      
       .listHeader {
         display: flex;
         align-items: center;
         gap: 2rem;
       }
+
+      .divHamburguer {
+        display: none;
+      }
+
 
       .active {
         color: var(--verde-menta-suave);
@@ -64,6 +68,12 @@
 @media(max-width: 750px) {
   .listHeader {
     display: none;
+  }
+  .navBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
   }
 } 
 
@@ -97,3 +107,4 @@
 .sol {
   background-image: url('../../assets/icons8-sol-50.png');
 }
+
