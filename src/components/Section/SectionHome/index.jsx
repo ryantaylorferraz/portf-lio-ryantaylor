@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import styles from "./style.module.scss"
 import { CircleTools } from '../../animacoes/CircleTools'
-import icongithub from "../../../assets/icongithub.png"
-import iconlinkedin from "../../../assets/iconlinkedin.png"
-import iconwhatsapp from "../../../assets/iconwhatsapp.png"
+
 import 'boxicons/css/boxicons.min.css';
 
 const tools = [
@@ -28,11 +26,13 @@ export const SectionHome = ({ addToRefs }) => {
     <section ref={addToRefs} id='home' className={styles.sectionContainer}>
       <div className={styles.divApresentation}>
         <div className={styles.divTexts}>
-          <div>
+          <div className={styles.divName}>
             <h1 className={styles.titleSection1}>Olá! Eu sou o </h1>
             <h1 className={styles.titleSection2}>Ryan Taylor</h1>
           </div>
-          <h3 className={styles.titleSection3}>Desevolvedor Web <span>Full Stack</span></h3>
+          <div>
+            <h3 className={styles.titleSection3}>Desevolvedor Web <span>Full Stack</span></h3>
+          </div>
         </div>
         <div className={styles.divInfo}>
           <p className={styles.pDev}>Desenvolvendo o futuro da web, <span className={styles.spanSite}>um site de cada vez.</span></p>
@@ -41,7 +41,7 @@ export const SectionHome = ({ addToRefs }) => {
             <a href="#" target='_blank'><i className={`bx bxl-linkedin ${styles.bx}`}></i></a>
             <a href="#" target='_blank'><i className={`bx bxl-whatsapp ${styles.bx}`}></i></a>
           </span>
-          <button className={styles.btnCv}>Download CV</button>
+          <button className={styles.btnCv}><a href="/curriculo-ryantf.pdf" download>Download CV</a></button>
         </div>
       </div>
       <div className={styles.divBox}>

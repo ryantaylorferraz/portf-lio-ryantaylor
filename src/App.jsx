@@ -3,12 +3,15 @@ import { Header } from "./components/Header";
 import { SectionAbout } from "./components/Section/SectionAbout";
 import { SectionHome } from "./components/Section/SectionHome";
 import "./styles/index.scss"
-import { Footer } from "./components/footer";
+import { Footer } from "./components/Footer";
 import { SectionServices } from "./components/Section/SectionServices";
 import { SectionProjects } from "./components/Section/SectionProjects";
 import { SectionContact } from "./components/Section/SectionContact";
 
+import { motion } from "framer-motion";
+
 function App() {
+
   const sectionsRef = useRef([]);
   const [activeId, setActiveId] = useState('');
 
@@ -17,8 +20,6 @@ function App() {
         sectionsRef.current.push(el);
     }
 };
-
-console.log(activeId);
 
   
 useEffect(() => {

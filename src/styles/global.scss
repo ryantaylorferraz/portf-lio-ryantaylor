@@ -1,14 +1,22 @@
 :root {
-  /* Cores Principais */
   --verde-pinho-profundo: #0f312b;
   --verde-menta-suave: #88b2a1;
   --verde-pastel-claro: #c4dad2;
   --branco-esverdeado: #e9efec;
   --verde-musgo-escuro: #06110f;
-
+  --white: #fff;
+  
   --font-primary: "Poppins", sans-serif;
   --font-secondary: "Inter", system-ui;
 }
+
+[data-theme="dark"] {
+  --verde-musgo-escuro: #fff; /* Ajuste conforme necessário */
+  --cor-texto: #000000; /* Ajuste conforme necessário */
+  --white: #000;
+  --verde-pinho-profundo: #88b2a1;
+}
+
 
 html {
   scroll-behavior: smooth;
@@ -18,8 +26,12 @@ html {
 body {
   font-family: var(--font-primary);
   background-color: var(--verde-musgo-escuro);
-  color: #fff;
+  color: var(--white);
   font-weight: 600;
+}
+
+button {
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {

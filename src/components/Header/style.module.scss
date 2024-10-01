@@ -1,7 +1,7 @@
 
 .headerContainer {
   position: fixed;
-  color: white;
+  color: var(--white);
   background-color: transparent;
   width: 100%;
   height: 80px;
@@ -30,7 +30,7 @@
 
     .navBox {
       display: flex;
-      color: white;
+      color: var(--white);
       gap: 2rem;
       font-size: 1.3rem;
 
@@ -45,7 +45,7 @@
         text-decoration: underline
       }
       .activeHome {
-        color: #FFF;
+        color: var(--white);
         text-decoration: underline
       }
 
@@ -66,3 +66,34 @@
     display: none;
   }
 } 
+
+.switch {
+  width: 70px;
+  height: 36px;
+  background-color:var(--verde-pinho-profundo);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 5px; /* Ajuste o padding, se necessário */
+  cursor: pointer;
+  position: relative; /* Para posicionar os ícones dentro */
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}
+
+.lua, .sol {
+  width: 25px; /* Ajuste a largura do ícone */
+  height: 25px; /* Ajuste a altura do ícone */
+  background-size: cover; /* Ajusta a imagem para cobrir o elemento */
+  background-position: center; /* Centraliza a imagem */
+}
+
+.lua {
+  background-image: url('../../assets/forma-de-meia-lua.png');
+}
+
+.sol {
+  background-image: url('../../assets/icons8-sol-50.png');
+}

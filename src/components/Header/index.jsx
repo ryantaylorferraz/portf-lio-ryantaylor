@@ -4,7 +4,18 @@ import { FiMoon, FiSun } from "react-icons/fi";
 import styles from "./style.module.scss"
 import { useEffect, useState } from "react";
 
+import { motion } from "framer-motion";
+import { useThemeContext } from "../../providers/themeProvider";
+
 export const Header = ({ activeId }) => {
+
+    const {toggleTheme, isOn} = useThemeContext()
+
+    const spring = {
+        type: "spring",
+        stiffness: 700,
+        damping: 30
+      };
 
     const [scrollY, setScrollY] = useState(0);
     const [modo, setModo] = useState(false)
@@ -33,9 +44,13 @@ export const Header = ({ activeId }) => {
                         <a href="#portfólio" className={activeId === 'portfólio' ? `${styles.active}` : ''}>Projetos</a>
                         <a href="#contact" className={activeId === 'contact' ? `${styles.active}` : ''}>Contato</a>
                     </div>
-                    <span className={styles.spanIcon} onClick={() => setModo(!modo)} > {modo ? <FiSun size={34} />
+                    <div className={styles.switch} data-isOn={isOn} onClick={toggleTheme}>
+                    <motion.div  className={isOn ? styles.sol : styles.lua} layout transition={spring} />
+                    </div>
+                    
+                    {/* <span className={styles.spanIcon} onClick={() => setModo(!modo)} > {modo ? <FiSun size={34} />
                         : <FiMoon size={34} />
-                    }</span>
+                    }</span> */}
                 </nav>
             </div>
         </header>

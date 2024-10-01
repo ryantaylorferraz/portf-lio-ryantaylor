@@ -41,7 +41,7 @@
 
     .titleSection1 {
       font-size: clamp(1.8rem, 1.733rem + 0.305vw, 2rem);
-      color: #fff;
+      color: var(--white);
     }
     .titleSection2 {
       font-size: clamp(2rem, 1.333rem + 3.048vw, 4rem);
@@ -75,7 +75,7 @@
           transition: 0.4s;
           &:hover {
             background-color: var(--verde-menta-suave);
-            color: #fff;
+            color: var(--white);
           }
           .bx {
             font-size: 28px;
@@ -87,24 +87,48 @@
         height: 2.5rem;
         border-radius: 0.5rem;
         background-color: var(--verde-menta-suave);
-        color: #fff;
+        color: var(--white);
         font-size: clamp(0.6rem, 0.44rem + 0.64vw, 1rem);
+        transition: .4s;
+        &:hover {
+          scale: (1.09);
+        }
       }
     }
   }
   .titleSection3 {
     font-size: clamp(0.8rem, 0.667rem + 0.61vw, 1.2rem);
-    color: #fff;
+    color: var(--white);
     text-align: end;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid;
+    animation: typing 3s steps(22) forwards, blink 1s step-end infinite;
     span {
       color: var(--verde-menta-suave);
+    }
+  }
+
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+    100% {
+      width: 100%;
     }
   }
 
   @media (min-width: 1150px) {
     .divBox {
       position: relative;
-      // height: 90%;
       border-top: 50vh solid var(--verde-menta-suave);
       border-right: 330px solid var(--verde-menta-suave);
       border-bottom: 50vh solid var(--verde-menta-suave);
@@ -124,19 +148,22 @@
 
 @media (max-width: 1150px) {
   .sectionContainer {
-    padding-top: clamp(5rem, 0.592rem + 20.151vw, 15rem);
+    padding-top: clamp(5rem, 1rem + 16vw, 15rem);
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
     .divApresentation {
-      // flex-direction: row;
       width: 80%;
-      margin-bottom: 5rem;
-      // flex-wrap: wrap;
-
+      height: 100%;
+      justify-content: space-around;
       .divTexts {
-        // flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        .divName {
+          // display: flex;
+          // align-items: center;
+        }
       }
     }
     /* styles.css */

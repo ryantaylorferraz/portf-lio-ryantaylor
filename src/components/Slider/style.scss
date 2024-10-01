@@ -45,7 +45,7 @@
             }
             &:hover {
                 background-color: var(--verde-menta-suave);
-                color: #ffffff;
+                color: var(--white);
             }
         }
     }
@@ -56,11 +56,11 @@
 }
 
 .swiper-button-prev {
-    color: #ffffff;
+    color: var(--white);
 
 }
 
 .swiper-button-next {
-    color: #ffffff;
+    color: var(--white);
 
 }

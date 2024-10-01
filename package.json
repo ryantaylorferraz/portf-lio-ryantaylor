@@ -14,6 +14,7 @@
     "@hookform/resolvers": "^3.9.0",
     "axios": "^1.7.5",
     "boxicons": "^2.1.4",
+    "framer-motion": "^11.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hook-form": "^7.53.0",

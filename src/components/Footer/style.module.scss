@@ -13,6 +13,7 @@
 
         .pFooter {
             font-size: .8rem;
+            line-height: 1.2rem;
         }
 
         .bx {
@@ -20,7 +21,7 @@
             font-size: 2.5rem;
             border-radius: 8px;
             border: 4px solid var(--verde-menta-suave); // Mantém o outline transparente
-            background-color: #FFF;
+            background-color: var(--white);
         
             &:hover {
                 outline: 4px solid transparent; // Aplica o outline na interação
