@@ -81,6 +81,8 @@ import project_7 from "../../assets/projects/project-7.png";
 import project_8 from "../../assets/projects/project-8.png";
 import project_9 from "../../assets/projects/project-9.png";
 import project_10 from "../../assets/projects/project.png";
+import project_11 from "../../assets/projects/project-11.png";
+import project_12 from "../../assets/projects/project-12.png";
 
 export const imgProjects = [
     {
@@ -142,5 +144,17 @@ export const imgProjects = [
         img: project_10,
         link: "https://taks-note.vercel.app/",
         github: "https://taks-note.vercel.app/",
+    },
+    {
+        id: 11,
+        img: project_11,
+        link: "https://4-kenzie-job-front.vercel.app/",
+        github: "https://github.com/ryantaylorferraz/kenzie-job",
+    },
+    {
+        id: 12,
+        img: project_12,
+        link: "https://3-kenzie-movie-front.vercel.app/",
+        github: "https://github.com/ryantaylorferraz/kenzie-movie",
     },
 ]

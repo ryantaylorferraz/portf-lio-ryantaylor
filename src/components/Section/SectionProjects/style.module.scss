@@ -8,6 +8,7 @@
     transform: translateY(0px);
   }
 }
+
 @keyframes appearr {
   from {
     opacity: 0;
@@ -23,18 +24,11 @@
   min-height: 75vh;
   margin-bottom: 2rem;
   width: 100%;
-  // padding-inline: clamp(2rem, -1.421rem + 18.246vw, 15rem);
-  // padding-top: 2rem;
   background-color: var(--verde-musgo-escuro);
   display: flex;
-  // align-items: start;
   padding-top: 5rem;
   justify-content: center;
   z-index: -1;
-
-  // @media(max-width: 600px) {
-  //     height: 90vh;
-  // }
 
   div {
     height: fit-content;

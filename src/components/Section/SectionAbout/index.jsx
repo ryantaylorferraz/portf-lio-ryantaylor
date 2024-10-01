@@ -1,12 +1,9 @@
 import styles from "./styles.module.scss"
 
-export const SectionAbout = ({addToRefs}) => {
+export const SectionAbout = ({ addToRefs }) => {
     return (
         <section ref={addToRefs} id='about' className={styles.sectionAbout}>
             <div className={styles.divContainer}>
-                {/* <div className={styles.divImg}>
-                    <img src="" alt="" />
-                    </div> */}
                 <div className={styles.divAbout}>
                     <h2 className={styles.titleAbout}>Sobre <span>Mim</span></h2>
                     <h3 className={styles.titleName}>Olá, pode me chamar de <span>Ryan</span></h3>

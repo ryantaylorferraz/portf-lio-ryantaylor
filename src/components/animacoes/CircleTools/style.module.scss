@@ -7,7 +7,7 @@
     height: 400px;
     border-radius: 100%;
     animation: rotate 9s ease infinite;
-    z-index: 1; /* Deve ser menor que o z-index da divBox */
+    z-index: 1;
   }
 
   .html,
@@ -17,51 +17,50 @@
     position: absolute;
     background-color: var(--verde-musgo-escuro);
     color: var(--verde-menta-suave);
-    height: 60px; /* Aumentando a altura dos elementos */
+    height: 60px;
     display: flex;
     align-items: center;
     font-weight: 700;
     opacity: 1;
     transition: opacity 0.5s;
-    font-size: 1.8rem; /* Corrigido para font-size */
+    font-size: 1.8rem;
   }
 
   .html {
-    bottom: 160px; /* Ajustado para o novo tamanho do círculo */
-    right: -115px; /* Ajustado para o novo tamanho do círculo */
+    bottom: 160px;
+    right: -115px;
     transform: rotate(180deg);
     transform-origin: left center;
   }
 
   .css {
-    bottom: 180px; /* Ajustado para o novo tamanho do círculo */
-    left: -35px; /* Ajustado para o novo tamanho do círculo */
+    bottom: 180px;
+    left: -35px;
   }
 
   .js {
-    top: -110px; /* Ajustado para o novo tamanho do círculo */
-    left: 200px; /* Ajustado para o novo tamanho do círculo */
+    top: -110px;
+    left: 200px;
     transform: rotate(90deg);
     transform-origin: left center;
   }
 
   .react {
-    bottom: -90px; /* Ajustado para o novo tamanho do círculo */
-    left: 180px; /* Ajustado para o novo tamanho do círculo */
+    bottom: -90px;
+    left: 180px;
     transform: rotate(-90deg);
     transform-origin: left center;
   }
 }
 
-@media(max-width: 1149px) {
+@media (max-width: 1149px) {
   .html,
   .css,
   .js,
   .react {
-display: none;
+    display: none;
   }
 }
-
 
 @keyframes rotate {
   100% {

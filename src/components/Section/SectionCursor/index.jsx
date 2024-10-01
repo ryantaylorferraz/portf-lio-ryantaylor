@@ -1,10 +1,11 @@
 import React from 'react'
+import styles from "./style.module.scss"
 
 import AnimatedCursor from 'react-animated-cursor'
 
 export const SectionCursor = () => {
     return (
-        <div>
+        <div className={styles.divCursor}>
             <AnimatedCursor
                 innerSize={20}
                 outerSize={20}

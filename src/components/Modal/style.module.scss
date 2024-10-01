@@ -18,15 +18,15 @@
     height: 100vh;
     background-color: var(--verde-musgo-escuro);
     z-index: 1000;
-    opacity: 0; /* Começa invisível */
-    transform: translateX(-200px); /* Começa fora da tela */
-    transition: opacity 0.5s ease, transform 0.3s ease; /* Transição suave */
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: opacity 0.5s ease, transform 0.3s ease;
   }
 
   .modalOverlay.open {
-    animation: appear 0.3s forwards; /* Aplica a animação */
-    opacity: 1; /* Torna visível */
-    transform: translateX(0); /* Move para a posição original */
+    animation: appear 0.3s forwards;
+    opacity: 1;
+    transform: translateX(0);
   }
 
   .modalBox {
@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    width: 35rem; /* Largura do conteúdo do modal */
+    width: 35rem;
   }
 
   .listModal {
@@ -43,10 +43,9 @@
     flex-direction: column;
     gap: 2rem;
     a {
-        &:hover {
-            color: var(--verde-menta-suave);
-        }
-
+      &:hover {
+        color: var(--verde-menta-suave);
+      }
     }
   }
 }

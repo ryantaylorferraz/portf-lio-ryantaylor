@@ -1,6 +1,5 @@
-// Modal.js
 import React from 'react';
-import styles from './style.module.scss'; // Ajuste o caminho conforme necessário
+import styles from './style.module.scss';
 import { useModalContext } from '../../providers/ModalProvider';
 
 export const ModalSection = () => {

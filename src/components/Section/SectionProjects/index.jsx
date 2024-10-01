@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./style.module.scss";
 import { Slider } from "../../Slider";
-
 import { SwiperSlide, Swiper } from "swiper/react";
 import { EffectCoverflow, Pagination, Navigation, A11y } from "swiper/modules";
 import { imgProjects } from "../../images";
@@ -21,9 +20,9 @@ export const SectionProjects = ({addToRefs}) => {
           slidesPerView={2}
           coverflowEffect={{
             rotate: 15,
-            stretch: 0,
+            stretch: 10,
             depth: 100,
-            modifier: 1,
+            modifier: 2,
           }}
           pagination={{ el: ".swiper-pagination", clickable: true }}
           navigation={{

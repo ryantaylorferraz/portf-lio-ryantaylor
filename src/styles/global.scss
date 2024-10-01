@@ -5,22 +5,20 @@
   --branco-esverdeado: #e9efec;
   --verde-musgo-escuro: #06110f;
   --white: #fff;
-  
+
   --font-primary: "Poppins", sans-serif;
   --font-secondary: "Inter", system-ui;
 }
 
 [data-theme="dark"] {
-  --verde-musgo-escuro: #fff; /* Ajuste conforme necessário */
-  --cor-texto: #000000; /* Ajuste conforme necessário */
+  --verde-musgo-escuro: #fff;
+  --cor-texto: #000000;
   --white: #000;
   --verde-pinho-profundo: #88b2a1;
 }
 
-
 html {
   scroll-behavior: smooth;
-
 }
 
 body {
@@ -45,7 +43,6 @@ button {
 ::-webkit-scrollbar-thumb {
   background-color: var(--verde-menta-suave);
   border-radius: 1px;
-  // border: 2px solid #e9efec;
 }
 
 ::-webkit-scrollbar-thumb:hover {

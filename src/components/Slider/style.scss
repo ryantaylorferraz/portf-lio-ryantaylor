@@ -1,66 +1,64 @@
 .swiper {
-    padding: 3rem 1rem;
-    width: clamp(18rem, 6.947rem + 58.947vw, 60rem);
-    border-radius: 10px;
+  padding: 3rem 1rem;
+  width: clamp(18rem, 6.947rem + 58.947vw, 60rem);
+  border-radius: 10px;
 }
 
 .swiper-slide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background-color: transparent;
+  border-radius: 10px;
+
+  img {
+    border-radius: 10px;
+    height: clamp(15rem, 11.154rem + 15.385vw, 25rem);
+  }
+
+  div {
+    width: 100%;
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    position: relative;
-    background-color: transparent;
-    border-radius: 10px;
-    
-    img {
-        border-radius: 10px;
-        height: clamp(15rem, 11.154rem + 15.385vw, 25rem);
+    position: absolute;
+    bottom: 30px;
+    gap: 1rem;
+    a {
+      border-radius: 5px;
+      text-align: center;
+      background-color: transparent;
+      border: 1px solid #718096;
+      width: 5rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(131, 131, 131);
+      font-weight: 500;
+      transition: 0.3s ease-in-out;
+      @media (max-width: 600px) {
+        height: 1.5rem;
+        width: 3rem;
+        font-size: 0.8rem;
+        align-items: center;
+      }
+      &:hover {
+        background-color: var(--verde-menta-suave);
+        color: var(--white);
+      }
     }
-
-    div {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        bottom: 30px;
-        gap: 1rem;
-        a {
-            border-radius: 5px;
-            text-align: center;
-            background-color: transparent;
-            border: 1px solid #718096;
-            width: 5rem;
-            height: 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgb(131, 131, 131);
-            font-weight: 500;
-            transition: .3s ease-in-out;
-            @media(max-width: 600px){
-                height: 1.5rem;
-                width: 3rem;
-                font-size: .8rem;
-                align-items: center;
-            }
-            &:hover {
-                background-color: var(--verde-menta-suave);
-                color: var(--white);
-            }
-        }
-    }
+  }
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #718096;
+  background-color: #718096;
 }
 
 .swiper-button-prev {
-    color: var(--white);
-
+  color: var(--white);
 }
 
 .swiper-button-next {
-    color: var(--white);
-
+  color: var(--white);
 }

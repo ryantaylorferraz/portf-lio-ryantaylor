@@ -31,8 +31,8 @@
     display: flex;
     gap: clamp(3rem, 2.118rem + 4.03vw, 5rem);
     flex-direction: column;
-    // justify-content: center;
     height: 20rem;
+
     .divTexts {
       display: flex;
       gap: 0.5rem;
@@ -89,7 +89,7 @@
         background-color: var(--verde-menta-suave);
         color: var(--white);
         font-size: clamp(0.6rem, 0.44rem + 0.64vw, 1rem);
-        transition: .4s;
+        transition: 0.4s;
         &:hover {
           scale: (1.09);
         }
@@ -160,42 +160,37 @@
       .divTexts {
         align-items: center;
         gap: 2rem;
-        .divName {
-          // display: flex;
-          // align-items: center;
-        }
       }
     }
-    /* styles.css */
+
     .carousel {
       display: flex;
-      overflow: hidden; /* Esconde o conteúdo que ultrapassa o contêiner */
-      width: 100%; /* Ajuste conforme necessário */
-      position: relative; /* Para o efeito de rolagem */
+      overflow: hidden;
+      width: 100%;
+      position: relative;
       background-color: var(--verde-menta-suave);
     }
 
     .ulHome {
       display: flex;
       align-items: center;
-      animation: scroll 14s linear infinite; /* Animação contínua */
-      padding: 0; /* Remove o padding padrão */
-      margin: 0; /* Remove o margin padrão */
+      animation: scroll 14s linear infinite;
+      padding: 0;
+      margin: 0;
     }
 
     .ulHome li {
-      list-style: none; /* Remove os marcadores da lista */
-      font-size: 1.5rem; /* Ajuste do tamanho da fonte */
-      padding: 0 2rem; /* Espaçamento entre os itens */
+      list-style: none;
+      font-size: 1.5rem;
+      padding: 0 2rem;
     }
 
-    /* Definindo a animação de rolagem */
     @keyframes scroll {
       0% {
         transform: translateX(0);
       }
       100% {
-        transform: translateX(-50%); /* Mova para a esquerda */
+        transform: translateX(-50%);
       }
     }
   }

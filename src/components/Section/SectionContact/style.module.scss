@@ -8,6 +8,7 @@
       transform: translateY(0px);
     }
   }
+
 @keyframes appearr {
     from {
       opacity: 0;
@@ -21,26 +22,24 @@
 
 .sectionContact {
   width: 100%;
-  padding-top: 5rem;
   max-width: 1400px;
   min-height: 100vh;
+  padding-top: 5rem;
   padding-inline: 2rem;
   margin: 0 auto;
   margin-bottom: 2rem;
   margin-top: 6rem;
 
   .divContainer {
-
     display: flex;
-    // align-items: center;
-    // justify-content: space-around;
-    gap: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
 
     .titleContact {
       font-size: 2.5rem;
+
       animation: appear linear;
       animation-timeline: view();
       animation-range: entry 0% cover 40%;
@@ -55,31 +54,31 @@
       animation-timeline: view();
       animation-range: entry 0% cover 45%;
 
+      width: clamp(20rem, 13.182rem + 36.364vw, 45rem);
+
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
-      width: clamp(20rem, 13.182rem + 36.364vw, 45rem);
-      // height: 40rem;
-      display: flex;
-      flex-direction: column;
       gap: 0.5rem;
+
       font-size: 1.2rem;
       font-weight: 500;
+
       .divInput {
         width: 100%;
         display: flex;
         gap: clamp(0.4rem, -0.04rem + 1.76vw, 1.5rem);
+
         input {
-          margin-bottom: 1rem;
-          width: 100%;
           height: 3.5rem;
+          width: 100%;
+          margin-bottom: 1rem;
+          padding-left: 1rem;
           background-color: var(--verde-musgo-escuro);
           border-radius: 10px;
           box-shadow: 0 5px 5px var(--verde-pinho-profundo);
           color: var(--white);
-          padding-left: 1rem;
         }
       }
 
@@ -97,7 +96,7 @@
 
       input::placeholder,
       textarea::placeholder {
-        color: #a0a0a0dc; /* Cor do placeholder */
+        color: #a0a0a0dc;
       }
 
       .btnContact {
@@ -108,8 +107,8 @@
         background-color: var(--verde-pinho-profundo);
         margin-top: 1rem;
         color: var(--white);
-        cursor: pointer;
         transition: .5s;
+
         &:hover {
           background-color: transparent;
           border: 1px solid var(--verde-menta-suave);

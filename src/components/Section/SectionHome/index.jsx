@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react'
 import styles from "./style.module.scss"
 import { CircleTools } from '../../animacoes/CircleTools'
 
@@ -21,7 +20,6 @@ const tools = [
 
 export const SectionHome = ({ addToRefs }) => {
 
-
   return (
     <section ref={addToRefs} id='home' className={styles.sectionContainer}>
       <div className={styles.divApresentation}>
@@ -37,16 +35,18 @@ export const SectionHome = ({ addToRefs }) => {
         <div className={styles.divInfo}>
           <p className={styles.pDev}>Desenvolvendo o futuro da web, <span className={styles.spanSite}>um site de cada vez.</span></p>
           <span className={styles.spanIcons}>
-            <a href="#" target='_blank'><i className={`bx bxl-github ${styles.bx}`}></i></a>
-            <a href="#" target='_blank'><i className={`bx bxl-linkedin ${styles.bx}`}></i></a>
-            <a href="#" target='_blank'><i className={`bx bxl-whatsapp ${styles.bx}`}></i></a>
+            <a href="https://github.com/ryantaylorferraz" target='_blank'><i className={`bx bxl-github ${styles.bx}`}></i></a>
+            <a href="https://www.linkedin.com/in/ryan-taylor-a93404275/" target='_blank'><i className={`bx bxl-linkedin ${styles.bx}`}></i></a>
+            <a href="https://wa.me/+5518997404977" target='_blank'><i className={`bx bxl-whatsapp ${styles.bx}`}></i></a>
           </span>
-          <button className={styles.btnCv}><a href="/curriculo-ryantf.pdf" download>Download CV</a></button>
+          <button className={styles.btnCv}><a href="/curriculo-ryantf.pdf" target='_blank' download>Download CV</a></button>
         </div>
       </div>
       <div className={styles.divBox}>
       </div>
+
       <CircleTools />
+      
       <div className={styles.carousel}>
         <ul className={styles.ulHome}>
           {tools.map((tool, index) => (
@@ -57,7 +57,6 @@ export const SectionHome = ({ addToRefs }) => {
           ))}
         </ul>
       </div>
-
     </section>
   )
 }

@@ -1,0 +1,29 @@
+.sectionContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .divContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    h1 {
+      font-size: clamp(1.7rem, 1.18rem + 2.08vw, 3rem);
+    }
+    p {
+      font-size: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+    }
+
+    button {
+      background-color: var(--verde-menta-suave);
+      padding: 1rem;
+      width: 8rem;
+      font-size: 1.3rem;
+      border-radius: 1rem;
+    }
+  }
+}

@@ -2,12 +2,12 @@ import { createContext, useContext, useEffect, useState } from "react";
 
 export const ThemeContext = createContext({});
 
-
 export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState('light');
     const [isOn, setIsOn] = useState(false);
+
     useEffect(() => {
-        const currentTheme = localStorage.getItem('@theme:') || 'light'; 
+        const currentTheme = localStorage.getItem('@theme:') || 'light';
         setTheme(currentTheme);
         document.documentElement.setAttribute('data-theme', currentTheme);
         setIsOn(currentTheme === 'dark');
