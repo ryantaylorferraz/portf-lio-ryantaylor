@@ -1,15 +1,16 @@
 import styles from "./styles.module.scss"
+import imgPerfil from "../../../assets/imgperfil.png"
 
 export const SectionAbout = ({ addToRefs }) => {
     return (
         <section ref={addToRefs} id='about' className={styles.sectionAbout}>
             <div className={styles.divContainer}>
+                    <img className={styles.imgPerfil} src={imgPerfil} alt="imagem de perfil" />
                 <div className={styles.divAbout}>
                     <h2 className={styles.titleAbout}>Sobre <span>Mim</span></h2>
                     <h3 className={styles.titleName}>Olá, pode me chamar de <span>Ryan</span></h3>
-                    <p className={styles.textAbout}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore beatae quae iure aliquam earum ab unde molestias mollitia cumque nihil ipsa nisi a, eum illum eveniet. Animi sapiente assumenda doloribus!
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed impedit officiis laudantium adipisci, corrupti pariatur incidunt praesentium ipsa voluptatem mollitia eveniet error accusantium, culpa nulla expedita! Sequi aliquam ipsam fugiat!
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis aliquid repellat perspiciatis provident architecto vitae facilis sed repellendus quisquam eligendi rerum distinctio, minima quia officia cum soluta? Eligendi, illo! Sunt!
+                    <p className={styles.textAbout}>
+                    Sou um desenvolvedor web, Conclui minha formação na <span>Kenzie Academy Brasil</span>, onde construí uma base sólida em programação <span>full-stack</span> aprendendo a colaborar em equipes e enfrentar <span>desafios complexos</span>, sempre buscando <span>soluções criativas e eficientes</span>.
                     </p>
                 </div>
             </div>

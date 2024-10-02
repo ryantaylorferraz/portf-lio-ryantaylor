@@ -87,6 +87,7 @@
         height: 2.5rem;
         border-radius: 0.5rem;
         background-color: var(--verde-menta-suave);
+        box-shadow: 0 0px 5px var(--verde-menta-suave);
         color: var(--white);
         font-size: clamp(0.6rem, 0.44rem + 0.64vw, 1rem);
         transition: 0.4s;

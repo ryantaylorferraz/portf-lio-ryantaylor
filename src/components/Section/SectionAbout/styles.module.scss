@@ -20,6 +20,17 @@
   }
 }
 
+@keyframes appearImg {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 @keyframes appearText {
   from {
     opacity: 0;
@@ -32,13 +43,13 @@
 }
 
 .sectionAbout {
-  min-height: 85vh;
+  min-height: 95vh;
   padding-inline: 2rem;
   padding-top: 8rem;
 
   .divContainer {
     width: 100%;
-    max-width: 1400px;
+    max-width: 900px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -47,6 +58,26 @@
     .divImg {
       width: 20%;
       background-color: red;
+    }
+
+    @media(min-width: 700px) {
+      .imgPerfil {
+        animation: appearImg linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 45%;
+
+        width: 250px;
+        height: 350px;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px var(--verde-menta-suave);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        object-fit: cover;
+        
+        &:hover {
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+          transform: scale(1.05);
+        }
+      }
     }
 
     .divAbout {
@@ -79,12 +110,23 @@
       .textAbout {
         letter-spacing: 0.1rem;
         font-weight: 500;
-        line-height: 1.3rem;
+        line-height: 2rem;
+        font-weight: 600;
 
         animation: appearText linear;
         animation-timeline: view();
         animation-range: entry 0% cover 45%;
+
+        span {
+          color: var(--verde-menta-suave);
+        }
       }
     }
+  }
+}
+
+@media(max-width: 699px) {
+  .imgPerfil {
+    display: none;
   }
 }
