@@ -21,7 +21,7 @@ export const SectionContact = ({addToRefs}) => {
                     <button className={styles.btnContact} type='submit'>Enviar mensagem</button>
 
                     <input type="hidden" name="accessKey" value="ab00dff9-3640-402c-ad88-5c6ffea61c54" />
-                    <input type="hidden" name="redirectTo" value="http://localhost:5173/thanks" />
+                    <input type="hidden" name="redirectTo" value="https://portfolio-ryantaylorferraz.vercel.app/thanks" />
                 </form>
             </div>
         </section>
